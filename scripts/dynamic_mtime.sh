@@ -46,8 +46,8 @@
 set -euo pipefail
 
 # Extracted this from kali's default colorscheme
-red="\e[38;2;246;97;81m"
-blue="\e[38;2;54;123;240m"
+red="\033[38;2;236;1;1m"
+blue="\033[38;2;39;127;255m"
 green="\e[38;2;71;212;185m"
 yellow="\e[38;2;254;164;76m"
 end="\e[0m"
