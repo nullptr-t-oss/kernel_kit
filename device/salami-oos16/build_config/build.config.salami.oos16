@@ -8,6 +8,7 @@ com.android.build.boot.security_patch:2025-02-01  \
 "
 
 VENDOR_BOOT_AVBTOOL_PROPS="com.android.build.vendor_boot.fingerprint:qti/kalama/kalama:13/TP1A.220905.001/1765954262790:user/release-keys"
+AVB_SIGN_VENDOR_BOOT_ROLLBACK_INDEX=1
 
 VENDOR_DLKM_AVBTOOL_PROPS=" \
 com.android.build.vendor_dlkm.os_version:13 \
