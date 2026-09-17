@@ -1,4 +1,0 @@
-/                                                      u:object_r:system_dlkm_file:s0
-/(system_dlkm|system/system_dlkm)(/.*)?                u:object_r:system_dlkm_file:s0
-/(system_dlkm|system/system_dlkm)/etc(/.*)?            u:object_r:system_dlkm_file:s0
-/(system_dlkm|system/system_dlkm)/lib/modules(/.*)?    u:object_r:system_dlkm_file:s0

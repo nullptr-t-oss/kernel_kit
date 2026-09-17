@@ -1,4 +1,0 @@
-/                                                      u:object_r:vendor_file:s0
-/(vendor_dlkm|vendor/vendor_dlkm)(/.*)?                u:object_r:vendor_file:s0
-/(vendor_dlkm|vendor/vendor_dlkm)/etc(/.*)?            u:object_r:vendor_configs_file:s0
-/(vendor_dlkm|vendor/vendor_dlkm)/lib/modules(/.*)?    u:object_r:vendor_file:s0

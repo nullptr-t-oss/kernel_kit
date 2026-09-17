@@ -1,0 +1,2 @@
+# warning: update this to 1 or remove this entirely if ever updating the prebuilt binaries for this specific device or globally
+AVBTOOL_GENERATES_FEC_BY_DEFAULT=0
