@@ -15,10 +15,14 @@ com.android.build.vendor_dlkm.os_version:13 \
 com.android.build.vendor_dlkm.fingerprint:qti/kalama/kalama:13/TP1A.220905.001/1765954262790:user/release-keys \
 "
 
+VENDOR_DLKM_FS_TYPE="erofs"
+
 SYSTEM_DLKM_AVBTOOL_PROPS=" \
 com.android.build.system_dlkm.os_version:13 \
 com.android.build.system_dlkm.fingerprint:qti/kalama/kalama:13/TP1A.220905.001/1765954262790:user/release-keys \
 "
+
+SYSTEM_DLKM_FS_TYPE="erofs"
 
 # FEC num roots for dlkm partitions
 SYSTEM_DLKM_FEC_NUM_ROOTS="2"
