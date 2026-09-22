@@ -1,0 +1,245 @@
+load("@rules_pkg//pkg:mappings.bzl", "pkg_attributes", "pkg_files", "strip_prefix")
+load(":cc.bzl", "import_libraries")
+load(":fail.bzl", "fail_rule")
+load(":prebuilt_tool.bzl", "prebuilt_tool")
+
+_MUSL_SHARED_LIBS = glob(["linux_musl-x86/lib64/*.so"])
+
+fail_rule(
+    name = "linux-x86",
+    message = "glibc is no longer supported.",
+    visibility = ["//visibility:public"],
+)
+
+fail_rule(
+    name = "linux-x86-libs",
+    message = "glibc is no longer supported. Use `:libs` (musl libc) instead.",
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "linux_musl-x86-libs",
+    srcs = _MUSL_SHARED_LIBS,
+    visibility = ["//visibility:private"],
+)
+
+alias(
+    name = "libs",
+    actual = ":linux_musl-x86-libs",
+    visibility = [
+        "@kleaf_clang_toolchain//:__subpackages__",
+    ],
+)
+
+import_libraries(
+    name = "imported_libs",
+    hdrs = glob(["linux_musl-x86/include/**/*.h"]),
+    shared_libraries = _MUSL_SHARED_LIBS,
+    strip_include_prefix = "linux_musl-x86/include",
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "runpath",
+    srcs = ["linux_musl-x86/lib64"],
+    visibility = ["//build/kernel/kleaf:__subpackages__"],
+)
+
+import_libraries(
+    name = "libcrypto",
+    hdrs = glob(["linux_musl-x86/include/openssl/*.h"]),
+    shared_libraries = ["linux_musl-x86/lib64/libcrypto-host.so"],
+    strip_include_prefix = "linux_musl-x86/include",
+    visibility = ["@toybox//:__subpackages__"],
+)
+
+import_libraries(
+    name = "libjemalloc",
+    hdrs = [],
+    shared_libraries = ["linux_musl-x86/lib64/libjemalloc5.so"],
+    strip_include_prefix = "",
+    visibility = [
+        "//build/kernel:__subpackages__",
+        "@toybox//:__subpackages__",
+    ],
+)
+
+filegroup(
+    name = "musl_sysroot_files",
+    srcs = glob([
+        "sysroots/x86_64-unknown-linux-musl/include/**",
+        "sysroots/x86_64-unknown-linux-musl/lib/**",
+    ]),
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    visibility = [
+        "@kleaf_clang_toolchain//:__subpackages__",
+    ],
+)
+
+filegroup(
+    name = "musl_sysroot_dir",
+    srcs = ["sysroots/x86_64-unknown-linux-musl"],
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    visibility = [
+        "@kleaf_clang_toolchain//:__subpackages__",
+    ],
+)
+
+filegroup(
+    name = "libc_musl_file",
+    srcs = ["sysroots/x86_64-unknown-linux-musl/lib/libc_musl.so"],
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    visibility = ["@kleaf_clang_toolchain//:__subpackages__"],
+)
+
+filegroup(
+    name = "swig_lib_dir",
+    srcs = ["linux_musl-x86/share/swig"],
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "avbtool",
+    visibility = ["//visibility:public"],
+)
+
+prebuilt_tool(
+    name = "blk_alloc_to_base_fs",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "build_image",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "build_super_image",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "certify_bootimg",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "e2fsck",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "e2fsdroid",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "fec",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "fsck.erofs",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "img2simg",
+    visibility = ["//visibility:public"],
+)
+
+prebuilt_tool(
+    name = "lpmake",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "mkbootfs",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "mkbootimg",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "mkdtboimg",
+    visibility = ["//visibility:public"],
+)
+
+prebuilt_tool(
+    name = "mkdtimg",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "mke2fs",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "mkfs.erofs",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "mkuserimg_mke2fs",
+    visibility = ["//visibility:public"],
+)
+
+prebuilt_tool(
+    name = "simg2img",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "swig",
+    data = glob(["linux_musl-x86/share/swig/**"]),
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "tune2fs",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "ufdt_apply_overlay",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+prebuilt_tool(
+    name = "unpack_bootimg",
+    visibility = ["//build/kernel:__subpackages__"],
+)
+
+# For //build/kernel:gki_certification_tools
+# Don't build this directly, as it will pick the default value for
+# //build/kernel/kleaf/platforms/libc
+pkg_files(
+    name = "gki_certification_tools_pkg_files",
+    srcs = [
+        "linux_musl-x86/bin/avbtool",
+        "linux_musl-x86/bin/certify_bootimg",
+        ":linux_musl-x86-libs",
+    ],
+    attributes = pkg_attributes(
+        mode = "0755",
+    ),
+    strip_prefix = strip_prefix.from_pkg("linux_musl-x86"),
+    visibility = ["//build/kernel:__subpackages__"],
+)
