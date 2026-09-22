@@ -1,0 +1,16 @@
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
+
+sh_test(
+    name = "linux-x86_path_test",
+    srcs = ["path_test.sh"],
+    data = [
+        "//prebuilts/build-tools:linux-x86",
+    ],
+)
+
+test_suite(
+    name = "tests",
+    tests = [
+        ":linux-x86_path_test",
+    ],
+)
