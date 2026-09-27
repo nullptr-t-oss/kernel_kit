@@ -7199,7 +7199,7 @@ new file mode 100644
 index 000000000000..cccd7b7d0ab9
 --- /dev/null
 +++ b/lib/lz4/lz4hc.c
-@@ -0,0 +1,2805 @@
+@@ -0,0 +1,2809 @@
 +/*
 +    LZ4 HC - High Compression Mode of LZ4
 +    Copyright (C) 2011-2020, Yann Collet.
@@ -7277,8 +7277,12 @@ index 000000000000..cccd7b7d0ab9
 +#define LZ4_OPT_NUM (1 << 12)
 +
 +/*===   Macros   ===*/
++#ifndef MIN
 +#define MIN(a, b) ((a) < (b) ? (a) : (b))
++#endif
++#ifndef MAX
 +#define MAX(a, b) ((a) > (b) ? (a) : (b))
++#endif
 +
 +/*===   Levels definition   ===*/
 +typedef enum { lz4mid, lz4hc, lz4opt } lz4hc_strat_e;
