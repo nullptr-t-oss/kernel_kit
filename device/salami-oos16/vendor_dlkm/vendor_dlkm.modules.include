@@ -183,6 +183,7 @@ oplus_bsp_tri_key.ko
 oplus_bsp_uxmem_opt.ko
 oplus_bsp_zram_opt.ko
 oplus_bsp_zsmalloc.ko
+oplus_bsp_close_loop.ko
 oplus_chg.ko
 oplus_chg_symbol.ko
 oplus_chg_v2.ko
