@@ -43,3 +43,39 @@ SYSTEM_DLKM_FEC_NUM_ROOTS="2"
 VENDOR_DLKM_FEC_NUM_ROOTS="2"
 
 PRE_DEFCONFIG_CMDS="clean_kernel_tree; compile_system_dlkm_modules"
+
+EXT_MODULES=(
+            ../vendor/qcom/opensource/mmrm-driver
+            ../vendor/qcom/opensource/mm-drivers/hw_fence
+            ../vendor/qcom/opensource/mm-drivers/sync_fence
+            ../vendor/qcom/opensource/mm-drivers/msm_ext_display
+            ../vendor/qcom/opensource/securemsm-kernel
+            ../vendor/qcom/opensource/display-drivers
+            ../vendor/qcom/opensource/audio-kernel
+            ../vendor/qcom/opensource/camera-kernel
+            ../vendor/qcom/opensource/dsp-kernel
+            ../vendor/qcom/opensource/video-driver
+            ../vendor/qcom/opensource/graphics-kernel
+            ../vendor/qcom/opensource/touch-drivers
+            ../vendor/qcom/opensource/fingerprint
+            ../vendor/qcom/opensource/datarmnet-ext/mem
+            ../vendor/qcom/opensource/dataipa/drivers/platform/msm
+            ../vendor/qcom/opensource/datarmnet/core
+            ../vendor/qcom/opensource/datarmnet-ext/aps
+            ../vendor/qcom/opensource/datarmnet-ext/offload
+            ../vendor/qcom/opensource/datarmnet-ext/shs
+            ../vendor/qcom/opensource/datarmnet-ext/sch
+            ../vendor/qcom/opensource/datarmnet-ext/perf
+            ../vendor/qcom/opensource/datarmnet-ext/perf_tether
+            ../vendor/qcom/opensource/datarmnet-ext/wlan
+            ../vendor/qcom/opensource/synx-kernel
+            ../vendor/qcom/opensource/spu-kernel
+            ../vendor/qcom/opensource/mm-sys-kernel/ubwcp
+            ../vendor/qcom/opensource/eva-kernel
+            ../vendor/qcom/opensource/wlan/platform
+            ../vendor/qcom/opensource/bt-kernel
+            ../vendor/nxp/opensource/driver
+            ../vendor/st/opensource/driver
+            ../vendor/st/opensource/eSE-driver
+            ../vendor/qcom/opensource/wlan/qcacld-3.0/.${QCACLD_DEV_NAME}
+          )
