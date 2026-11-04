@@ -420,9 +420,6 @@ oplus_networks_tuning.ko
 oplus_dns_hook.ko
 oplus_game_first.ko
 oplus_vnet.ko
-oplus_security_keventupload.ko
-oplus_secure_harden.ko
-oplus_security_guard.ko
 game_opt.ko
 oplus_connectivity_routerboost.ko
 oplus_wificapcenter.ko

@@ -280,8 +280,6 @@ oplus_networks_tuning.ko
 oplus_dns_hook.ko
 oplus_game_first.ko
 oplus_vnet.ko
-oplus_security_keventupload.ko
-oplus_secure_harden.ko
 oplus_security_guard.ko
 game_opt.ko
 oplus_connectivity_routerboost.ko
@@ -290,7 +288,6 @@ oplus_wifismartantenna.ko
 oplus_connectivity_sla.ko
 oplus_stability_helper.ko
 oplus_patch.ko
-oplus_secure_common.ko
 q6_notifier_dlkm.ko
 spf_core_dlkm.ko
 audpkt_ion_dlkm.ko
