@@ -39,6 +39,8 @@ rtw_8822cs.ko
 rtw_8822cu.ko
 rtw_8723x.ko
 rtw_8703b.ko
+rtw_8723b.ko
+rtw_8723bs.ko
 rtw_8723cs.ko
 rtw_8723d.ko
 rtw_8723de.ko

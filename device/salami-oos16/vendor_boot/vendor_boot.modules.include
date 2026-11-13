@@ -188,6 +188,7 @@ oplus_bsp_mapped_protect.ko
 oplus_bsp_memleak_detect.ko
 oplus_bsp_midas.ko
 oplus_bsp_mm_osvelte.ko
+oplus_bsp_file_read_record.ko
 oplus_bsp_mxm_down.ko
 oplus_bsp_mxm_up.ko
 oplus_bsp_pcppages_opt.ko
