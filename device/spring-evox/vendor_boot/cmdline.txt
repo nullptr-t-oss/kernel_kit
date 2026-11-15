@@ -1,1 +1,1 @@
-log_buf_len=2M msm_rtb.filter=0x237 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 swinfo.fingerprint=EvolutionX-16.0-20260715-spring-11.9-Unofficial mtdoops.fingerprint=EvolutionX-16.0-20260715-spring-11.9-Unofficial bootconfig
+log_buf_len=2M msm_rtb.filter=0x237 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 swinfo.fingerprint= mtdoops.fingerprint= bootconfig

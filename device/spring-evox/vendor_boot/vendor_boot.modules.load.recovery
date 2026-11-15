@@ -1,6 +1,7 @@
 sched-walt.ko
 qcom_ipc_logging.ko
 zsmalloc.ko
+dynamic_readahead.ko
 qcom-mpm.ko
 irq-qcom-mpm.ko
 msm_show_resume_irq.ko
@@ -96,6 +97,8 @@ qnoc-holi.ko
 qnoc-qos-rpm.ko
 icc-debug.ko
 mi_memory.ko
+kshrink_slabd.ko
+mi_memqr.ko
 slimbus.ko
 qrtr.ko
 qrtr-smd.ko
@@ -259,3 +262,10 @@ nt36xxx_spi.ko
 lct_tp.ko
 xiaomi_tp.ko
 wifi_ant_check.ko
+spf_core_dlkm.ko
+gpr_dlkm.ko
+snd_event_dlkm.ko
+q6_notifier_dlkm.ko
+q6_pdr_dlkm.ko
+adsp_loader_dlkm.ko
+focaltech_spi.ko

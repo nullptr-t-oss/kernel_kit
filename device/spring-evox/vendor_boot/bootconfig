@@ -2,4 +2,4 @@ androidboot.hardware=qcom
 androidboot.memcg=1
 androidboot.serialconsole=0
 androidboot.usbcontroller=4e00000.dwc3
-androidboot.load_modules_parallel=true
+androidboot.load_modules_parallel=false

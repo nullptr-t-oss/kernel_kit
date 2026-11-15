@@ -1,2 +1,28 @@
+# build.config for spring, all avbtool data provided here are extract using : avbtool info_image --image ${image}
+
+BOOT_AVBTOOL_PROPS=" \
+com.android.build.boot.os_version:17 \
+com.android.build.boot.fingerprint:Redmi/infinity_spring/spring:17/CP2A.260605.016/eng.androi:userdebug/release-keys \
+"
+
+VENDOR_BOOT_AVBTOOL_PROPS="com.android.build.vendor_boot.fingerprint:Redmi/infinity_spring/spring:17/CP2A.260605.016/eng.androi:userdebug/release-keys"
+
+
+VENDOR_DLKM_AVBTOOL_PROPS=" \
+com.android.build.vendor_dlkm.os_version:17 \
+com.android.build.vendor_dlkm.fingerprint:Redmi/infinity_spring/spring:17/CP2A.260605.016/eng.androi:userdebug/release-keys \
+"
+
+SYSTEM_DLKM_AVBTOOL_PROPS=" \
+com.android.build.system_dlkm.os_version:17 \
+com.android.build.system_dlkm.fingerprint:Redmi/infinity_spring/spring:17/CP2A.260605.016/eng.androi:userdebug/release-keys \
+"
+
+
+
+# FEC num roots for dlkm partitions
+SYSTEM_DLKM_FEC_NUM_ROOTS="2"
+VENDOR_DLKM_FEC_NUM_ROOTS="2"
+
 # warning: update this to 1 or remove this entirely if ever updating the prebuilt binaries for this specific device or globally
 AVBTOOL_GENERATES_FEC_BY_DEFAULT=0

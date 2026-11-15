@@ -3,9 +3,10 @@
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <remote fetch="https://android.googlesource.com/" name="aosp"/>
   <remote fetch="https://github.com/nullptr-t-oss" name="nullptr_t"/>
+  <remote fetch="https://github.com/xiaomi-spring" name="spring"/>
   <remote fetch="https://github.com/MiCode" name="ximi"/>
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
-  <project remote="nullptr_t" name="kernel_xiaomi_spring" path="kernel_platform/common" revision="spring">
+  <project remote="spring" name="android_kernel_xiaomi_sm6375" path="kernel_platform/common" revision="spring/upstream">
     <linkfile dest=".source_date_epoch_dir" src="."/>
     <linkfile dest="kernel_platform/msm-kernel" src="."/>
   </project>

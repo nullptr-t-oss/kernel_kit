@@ -1,6 +1,9 @@
+rfkill.ko
+libarc4.ko
 sched-walt.ko
 qcom_ipc_logging.ko
 zsmalloc.ko
+dynamic_readahead.ko
 qcom-mpm.ko
 irq-qcom-mpm.ko
 msm_show_resume_irq.ko
@@ -96,6 +99,8 @@ qnoc-holi.ko
 qnoc-qos-rpm.ko
 icc-debug.ko
 mi_memory.ko
+kshrink_slabd.ko
+mi_memqr.ko
 slimbus.ko
 qrtr.ko
 qrtr-smd.ko
