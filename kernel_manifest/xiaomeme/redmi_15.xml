@@ -10,6 +10,7 @@
     <linkfile dest=".source_date_epoch_dir" src="."/>
     <linkfile dest="kernel_platform/msm-kernel" src="."/>
   </project>
+  <project remote="spring" name="android_kernel_modules_and_devicetree_xiaomi_sm6375" path="./" revision="spring/upstream"/>
   <project remote="ximi" name="kernel_devicetree" path="kernel_platform/qcom/proprietary" revision="spring-v-oss">
     <linkfile dest="kernel_platform/common/arch/arm64/boot/dts/vendor" src="."/>
   </project>

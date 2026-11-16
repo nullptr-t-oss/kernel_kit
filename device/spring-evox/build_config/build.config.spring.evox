@@ -26,3 +26,33 @@ VENDOR_DLKM_FEC_NUM_ROOTS="2"
 
 # warning: update this to 1 or remove this entirely if ever updating the prebuilt binaries for this specific device or globally
 AVBTOOL_GENERATES_FEC_BY_DEFAULT=0
+
+EXT_MODULES=(
+    ../vendor/qcom/opensource/mmrm-driver
+    ../vendor/qcom/opensource/mm-drivers/hw_fence
+    ../vendor/qcom/opensource/mm-drivers/sync_fence
+    ../vendor/qcom/opensource/mm-drivers/msm_ext_display
+    ../vendor/qcom/opensource/securemsm-kernel
+    ../vendor/qcom/opensource/display-drivers
+    ../vendor/qcom/opensource/audio-kernel
+    ../vendor/qcom/opensource/camera-kernel
+    ../vendor/qcom/opensource/video-driver
+    ../vendor/qcom/opensource/dsp-kernel
+    ../vendor/qcom/opensource/graphics-kernel
+    ../vendor/qcom/opensource/touch-drivers
+    ../vendor/qcom/opensource/datarmnet-ext/mem
+    ../vendor/qcom/opensource/dataipa/drivers/platform/msm
+    ../vendor/qcom/opensource/datarmnet/core
+    ../vendor/qcom/opensource/datarmnet-ext/aps
+    ../vendor/qcom/opensource/datarmnet-ext/offload
+    ../vendor/qcom/opensource/datarmnet-ext/shs
+    ../vendor/qcom/opensource/datarmnet-ext/sch
+    ../vendor/qcom/opensource/datarmnet-ext/perf
+    ../vendor/qcom/opensource/datarmnet-ext/perf_tether
+    ../vendor/qcom/opensource/datarmnet-ext/wlan
+    ../vendor/qcom/opensource/platform
+    ../vendor/qcom/opensource/bt-kernel
+    ../vendor/nxp/opensource/driver
+    ../vendor/qcom/opensource/wlan/qcacld-3.0/.${QCACLD_DEV_NAME}
+)
+
